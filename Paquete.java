@@ -81,7 +81,6 @@ public class Paquete
         double pesoVol = 0;
         pesoVol = calcularVolumen()/5000;
         return pesoVol;
- 
     }
 
     /**
@@ -138,7 +137,4 @@ public class Paquete
     public void print() {
         System.out.println(this.toString());
     }
-
-    
-
 }

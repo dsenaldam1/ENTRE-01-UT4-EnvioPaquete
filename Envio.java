@@ -55,8 +55,17 @@ public class Envio
      * (dependerá de cuántos paquetes estén a null)
      */
     public int getNumeroPaquetes() {
-        //TODO
-       return 0;
+        int cantidad = 3;
+        if(paquete1 == null){
+            cantidad--;
+        }
+        if(paquete2 == null){
+            cantidad--;
+        }
+        if(paquete3 == null){
+            cantidad--;
+        }
+        return cantidad;
 
     }
 
@@ -65,8 +74,7 @@ public class Envio
      * (tiene exactamente 3 paquetes)
      */
     public boolean envioCompleto() {
-       //TODO
-       return false;
+       return getNumeroPaquetes() == 3;
 
     }
 
