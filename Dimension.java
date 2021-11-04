@@ -60,7 +60,7 @@ public class Dimension
         String str = "";
         str += String.format("%20s %10.2f(cm)\n", alto, this.alto);
         str += String.format("%20s %10.2f(cm)\n", ancho, this.ancho);
-        str += String.format("%20s %10.2f(cm)", largo, this.largo);
+        str += String.format("%20s %10.2f(cm)\n", largo, this.largo);
         return str;
 
     }
