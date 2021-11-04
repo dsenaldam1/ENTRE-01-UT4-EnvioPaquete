@@ -116,8 +116,19 @@ public class Envio
      *  
      */
     public double calcularCosteTotalEnvio() {
-        //TODO
-       return 0;
+       double euros = 0;
+       double pesoTotal = 0;
+       if(paquete1 != null){
+            pesoTotal += Math.ceil(paquete1.calcularPesoFacturable());
+        }
+       if(paquete2 != null){
+            pesoTotal += Math.ceil(paquete2.calcularPesoFacturable());
+        }
+       if(paquete3 != null){
+            pesoTotal += Math.ceil(paquete3.calcularPesoFacturable());
+        }
+       euros = pesoTotal *  PRECIO_KILO;  
+       return euros;
 
     }
 
@@ -127,8 +138,19 @@ public class Envio
      * (leer enunciado)
      */
     public String toString() {
-       //TODO
-       return null;
+        String costeTotal = "Coste total del envio: ";
+        String str = "Nº de paquetes: " + getNumeroPaquetes() + "\n";
+        if(paquete1 != null){
+            str += paquete1.toString() + "\n";
+        }
+        if(paquete2 != null){
+            str += paquete2.toString() + "\n";
+        }
+        if(paquete3 != null){
+            str += paquete3.toString() + "\n";
+        }
+        str += String.format("%20s %10.2f€\n", costeTotal, calcularCosteTotalEnvio());
+        return str;
     }
 
     /**

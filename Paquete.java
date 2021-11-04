@@ -94,7 +94,6 @@ public class Paquete
             facturable = this.getPeso();            
         }
         else{
-
             facturable = calcularPesoVolumetrico();
         }
         return facturable;
@@ -124,7 +123,7 @@ public class Paquete
         str += dimension.toString();
         str += String.format("%20s %10.2f(kg)\n", peso, this.getPeso());
         str += String.format("%20s %10.2f(cm3)\n", volumen, calcularVolumen());
-        str += String.format("%20s %10.2f(kg)", pesovol, calcularPesoVolumetrico());
+        str += String.format("%20s %10.2f(kg)\n", pesovol, calcularPesoVolumetrico());
        return str;
 
     }
