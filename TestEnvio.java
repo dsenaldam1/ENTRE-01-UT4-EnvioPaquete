@@ -1,7 +1,7 @@
 
 /**
  *  
- * 
+ * Clase para testear el envio de paquetes
  * @author  David Sena
  * @version  
  */
